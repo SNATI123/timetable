@@ -2,9 +2,9 @@
 --Exo3
 CREATE VIEW myview AS
 SELECT DISTINCT C.codeCours, 
-                T.jourCoursDate,
-                T. TRANCHE,
-                C.VOLUMEH 
+                T.jourCoursDate AS "Date",
+                T. TRANCHE AS "Tranches",
+                C.VOLUMEH AS "Horaires" 
 FROM Cours C
 JOIN Typehoraire T
 ON C.codeCours= T.crsCodeCours
