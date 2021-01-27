@@ -19,8 +19,12 @@ IN ('lundi','mardi','mercredi','jeudi','vendredi','samedi') AND cls.classNiveaui
 
 
 --Exo4
-alter table etudiant add password varchar(50);
+           -- Pour l'etudiant--
+alter table etudiant add password varchar(30);
 update etudiant set password = ora_hash(matricule) where matricule = valeur;
+           -- Pour l'enseignant--
+alter table enseignants add password varchar(30);
+update enseignants set password = ora_hash(matricule) where matricule = valeur;
 
 -- Exo5
 SET MARKUP HTML ON
