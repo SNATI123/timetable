@@ -2,7 +2,7 @@
 --Exo3
 CREATE VIEW emploisdetemps AS 
 SELECT DISTINCT C.codeCours,
-                T.jourCoursDate  
+                T.jourCoursDate AS "Date"  
 FROM Cours C
 JOIN Typehoraire T
 ON C.codeCours= T.crsCodeCours
